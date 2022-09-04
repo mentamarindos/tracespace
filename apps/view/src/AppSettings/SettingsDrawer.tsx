@@ -42,13 +42,6 @@ export default function SettingsDrawer(props: Props): JSX.Element {
 
   return (
     <Drawer title={TITLE} open={open} close={close}>
-      <Checkbox
-        checked={appPreferences.analyticsOptIn || false}
-        className={SETTINGS_ITEM_STYLE}
-        onChange={handleTrackingChange}
-      >
-        {USAGE_TRACKING_COPY}
-      </Checkbox>
 
       <Label className={SETTINGS_ITEM_STYLE}>
         <span className={LABEL_COPY_STYLE}>{DELETE_SAVED_COPY}</span>
@@ -57,19 +50,6 @@ export default function SettingsDrawer(props: Props): JSX.Element {
           onClick={handleDeleteAllClick}
         />
       </Label>
-      <footer className={FOOTER_STYLE}>
-        <Label>
-          <span className={USER_ID_LABEL_STYLE}>{USER_ID_COPY}:</span>
-          <input
-            className={USER_ID_INPUT_STYLE}
-            type="text"
-            value={getAnalyticsUserId() || 'N/A'}
-            onFocus={select}
-            readOnly
-          />
-        </Label>
-        {FOOTER}
-      </footer>
     </Drawer>
   )
 }

@@ -20,4 +20,5 @@ export function BoardNameInput(props: FieldProps): JSX.Element {
       {...props.field}
     />
   )
+  
 }

@@ -6,8 +6,6 @@ coverage
 *.tsbuildinfo
 
 # artifacts
-bundle.*
-**/dist
 */**/LICENSE
 **/*.tgz
 **/lib/**/*.d.ts

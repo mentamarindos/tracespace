@@ -4,7 +4,7 @@ import {useAppState} from '../state'
 import {Icon, Fade} from '../ui'
 import {FileEvent} from '../types'
 import FileInput from './FileInput'
-import UrlInput from './UrlInput'
+// import UrlInput from './UrlInput'
 
 const UPLOAD_MESSAGE = 'Upload your Gerber and drill files to render your board'
 const UPLOAD_SUBMESSAGE = 'ZIP files work, too'
@@ -31,6 +31,7 @@ export default function LoadFiles(props: LoadFilesProps): JSX.Element {
           faProps={{pulse: true}}
         />
       </Fade>
+
       <Fade in={!mode && !loading}>
         <div className={WRAPPER_STYLE}>
           <FileInput handleFiles={props.handleFiles}>
@@ -40,7 +41,8 @@ export default function LoadFiles(props: LoadFilesProps): JSX.Element {
               <span className={SUBMESSAGE_STYLE}>({UPLOAD_SUBMESSAGE})</span>
             </p>
           </FileInput>
-          <UrlInput handleUrl={props.handleUrl}>{URL_MESSAGE}</UrlInput>
+
+          {/* <UrlInput handleUrl={props.handleUrl}>{URL_MESSAGE}</UrlInput> */}
         </div>
       </Fade>
     </>
